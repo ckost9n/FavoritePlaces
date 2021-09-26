@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--My Places-->
         <scene sceneID="zvd-hG-GoM">
             <objects>
                 <tableViewController id="vEm-8g-AJS" customClass="MainTableViewController" customModule="FavoritePlaces" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="vEm-8g-AJS" id="wUk-rg-Lnk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="hC7-H1-Wxy"/>
+                    <navigationItem key="navigationItem" title="My Places" id="hC7-H1-Wxy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIL-zn-VIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,6 +43,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tVG-zZ-4bn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="vEm-8g-AJS" kind="relationship" relationship="rootViewController" id="SvP-2Z-dSy"/>
@@ -50,7 +53,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJE-oh-3sX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="563" y="50"/>
+            <point key="canvasLocation" x="604" y="50"/>
         </scene>
     </scenes>
     <resources>

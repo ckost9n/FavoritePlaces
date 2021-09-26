@@ -10,6 +10,7 @@ import UIKit
 class MainTableViewController: UITableViewController {
     
     private let restaurantNames = Restorant.restaurantNames
+    private let heightCell: CGFloat = 85
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,15 +31,22 @@ class MainTableViewController: UITableViewController {
 
         let restauran = restaurantNames[indexPath.row]
         cell.imageView?.image = UIImage(named: restauran)
+        cell.imageView?.layer.cornerRadius = cell.frame.size.height / 2
+        cell.imageView?.clipsToBounds = true
         cell.textLabel?.text = restauran
 
         return cell
+    }
+    
+    // MARK: - Table View Delegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return heightCell
     }
 
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
