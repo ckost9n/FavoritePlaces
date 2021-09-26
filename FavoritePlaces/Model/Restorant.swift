@@ -10,9 +10,9 @@ import Foundation
 struct Restorant {
     
     static let restaurantNames = [
-        "Burger Heroes", "Kitchen", "Bonsai", "Достархан",
+        "Burger Heroes", "Kitchen", "Bonsai", "Дастархан",
         "Индокитай", "X.O", "Балкан Гриль", "Sherlock Holmes",
-        "Speak Easy", "Morris Pub", "Вкучные Истории",
+        "Speak Easy", "Morris Pub", "Вкусные истории",
         "Классик", "Love&Life", "Шок", "Бочка"
     ]
     
