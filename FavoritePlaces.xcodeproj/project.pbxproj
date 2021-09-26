@@ -14,6 +14,7 @@
 		3C236A1E27006DB50050BF3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C236A1C27006DB50050BF3C /* LaunchScreen.storyboard */; };
 		3C236A2B27006F260050BF3C /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C236A2A27006F260050BF3C /* MainTableViewController.swift */; };
 		3C236A2D2700E4420050BF3C /* Restorant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C236A2C2700E4410050BF3C /* Restorant.swift */; };
+		3C236A2F2700EF750050BF3C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C236A2E2700EF740050BF3C /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3C236A1F27006DB50050BF3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C236A2A27006F260050BF3C /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		3C236A2C2700E4410050BF3C /* Restorant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restorant.swift; sourceTree = "<group>"; };
+		3C236A2E2700EF740050BF3C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				3C236A1C27006DB50050BF3C /* LaunchScreen.storyboard */,
 				3C236A1727006DAF0050BF3C /* Main.storyboard */,
+				3C236A2E2700EF740050BF3C /* CustomTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C236A2D2700E4420050BF3C /* Restorant.swift in Sources */,
+				3C236A2F2700EF750050BF3C /* CustomTableViewCell.swift in Sources */,
 				3C236A2B27006F260050BF3C /* MainTableViewController.swift in Sources */,
 				3C236A1227006DAF0050BF3C /* AppDelegate.swift in Sources */,
 				3C236A1427006DAF0050BF3C /* SceneDelegate.swift in Sources */,
