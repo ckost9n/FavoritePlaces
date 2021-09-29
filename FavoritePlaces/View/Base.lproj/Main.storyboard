@@ -68,6 +68,7 @@
                                     <outlet property="locationLabel" destination="Zmy-xT-r5N" id="DXl-te-dr1"/>
                                     <outlet property="nameLabel" destination="2sb-Z3-bHR" id="LBB-hb-lWh"/>
                                     <outlet property="typeLabel" destination="QSj-tL-5bh" id="cly-kG-AYO"/>
+                                    <segue destination="lFB-Df-2if" kind="show" identifier="showDetail" id="hjV-f8-X8X"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,7 +77,7 @@
                             <outlet property="delegate" destination="vEm-8g-AJS" id="wUk-rg-Lnk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Places" id="hC7-H1-Wxy">
+                    <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="hC7-H1-Wxy">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zcJ-fX-gsV">
                             <connections>
                                 <segue destination="NW7-0B-d1L" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="GHk-lJ-cWo"/>
@@ -233,8 +234,12 @@
                             <outlet property="delegate" destination="lFB-Df-2if" id="FJy-Of-O06"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Place" id="MIV-El-aQe">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="674-o9-JLg"/>
+                    <navigationItem key="navigationItem" title="New Place" largeTitleDisplayMode="always" id="MIV-El-aQe">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="674-o9-JLg">
+                            <connections>
+                                <action selector="cancelAction:" destination="lFB-Df-2if" id="2aM-Ja-Vge"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="DKt-OQ-JD7">
                             <connections>
                                 <action selector="cancelAction:" destination="lFB-Df-2if" id="fj3-HR-q7S"/>
@@ -253,14 +258,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suL-g3-or1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="jNd-9t-78T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3121.739130434783" y="49.553571428571423"/>
+            <point key="canvasLocation" x="2303" y="50"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0bq-8e-njS">
             <objects>
                 <navigationController id="ALG-Xq-3Zz" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tVG-zZ-4bn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="tVG-zZ-4bn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
@@ -290,9 +295,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAd-Nh-3ha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2302.898550724638" y="49.553571428571423"/>
+            <point key="canvasLocation" x="2303" y="-831"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fKO-vR-kEi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="195" height="196"/>
         <systemColor name="systemBackgroundColor">
