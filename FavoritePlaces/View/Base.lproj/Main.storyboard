@@ -160,6 +160,11 @@
                                                 <constraint firstItem="3Qr-JI-Hgz" firstAttribute="centerY" secondItem="Rvx-zv-H2b" secondAttribute="centerY" id="5kR-in-pGJ"/>
                                                 <constraint firstItem="3Qr-JI-Hgz" firstAttribute="centerX" secondItem="Rvx-zv-H2b" secondAttribute="centerX" id="n0P-lr-kX2"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="3Qr-JI-Hgz"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>

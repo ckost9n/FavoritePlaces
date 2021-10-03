@@ -104,9 +104,9 @@ class NewPlaceTableViewController: UITableViewController {
         
         let newPlace = Place()
         
-        let image: UIImage?
+        let image = imageIsChanged ? placeImage.image : UIImage(named: "imagePlaceholder")
         
-        image = imageIsChanged ? placeImage.image : image = UIImage(named: "imagePlaceholder")
+//        image = imageIsChanged ? placeImage.image : image = UIImage(named: "imagePlaceholder")
         
 //        if imageIsChanged {
 //            image = placeImage.image
