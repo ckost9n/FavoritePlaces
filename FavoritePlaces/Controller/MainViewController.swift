@@ -10,6 +10,7 @@ import RealmSwift
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    private let maxRating = 5.0
     private let searchController = UISearchController(searchResultsController: nil)
     private var places: Results<Place>!
     private var filteredPlaces: Results<Place>!
@@ -42,11 +43,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func reversedSorting(_ sender: UIBarButtonItem) {
         ascendingSorting.toggle()
         
-        if ascendingSorting {
-            reversedSortingButton.image = UIImage(named: "AZ")
-        } else {
-            reversedSortingButton.image = UIImage(named: "ZA")
-        }
+        reversedSortingButton.image = ascendingSorting ? UIImage(named: "AZ") : UIImage(named: "ZA")
         
         sorting()
     }
@@ -93,10 +90,25 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.nameLabel.text = place.name
         cell.locationLabel.text = place.location
         cell.typeLabel.text = place.type
+        cell.ratingLabel.text = ""
         cell.imageOfPlace.image = UIImage(data: place.imageData!)
         
-        cell.imageOfPlace.layer.cornerRadius = cell.imageOfPlace.frame.size.height / 2
-        cell.imageOfPlace.clipsToBounds = true
+        if place.rating == 0 {
+            for _ in 0..<Int(maxRating) {
+                cell.ratingLabel.text?.append("☆")
+            }
+        } else if place.rating == maxRating {
+            for _ in 0..<Int(maxRating) {
+                cell.ratingLabel.text?.append("★")
+            }
+        } else {
+            for _ in 0..<Int(place.rating) {
+                cell.ratingLabel.text?.append("★")
+            }
+            for _ in 0..<Int(maxRating - place.rating) {
+                cell.ratingLabel.text?.append("☆")
+            }
+        }
 
         return cell
     }
