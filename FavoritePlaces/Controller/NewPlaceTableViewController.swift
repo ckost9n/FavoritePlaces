@@ -9,8 +9,13 @@ import UIKit
 
 class NewPlaceTableViewController: UITableViewController {
     
-    var currentPlace: Place?
+    var currentPlace: Place!
     var imageIsChanged = false
+    var rating = 0.0 {
+        didSet {
+            updateButtonSelectionState()
+        }
+    }
 
     @IBOutlet var saveButton: UIBarButtonItem!
     
@@ -22,6 +27,7 @@ class NewPlaceTableViewController: UITableViewController {
     @IBOutlet var buttonCollection: [UIButton]! {
         didSet {
             setupButons()
+            updateButtonSelectionState()
         }
     }
     
@@ -32,6 +38,14 @@ class NewPlaceTableViewController: UITableViewController {
         saveButton.isEnabled = false
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setupEditScreen()
+        
+    }
+    @IBAction func buttonAction(_ sender: UIButton) {
+        
+        let index = sender.tag
+        let selectedRating = Double(index + 1)
+        
+        rating = selectedRating == rating ? 0 : selectedRating
         
     }
     
@@ -111,8 +125,6 @@ class NewPlaceTableViewController: UITableViewController {
         
         let image = imageIsChanged ? placeImage.image : UIImage(named: "imagePlaceholder")
         
-        
-        
         let imageData = image?.pngData()
 
         newPlace.name = placeName.text!
@@ -188,10 +200,20 @@ extension NewPlaceTableViewController {
             .font: UIFont.boldSystemFont(ofSize: 40)
         ]
         for button in buttonCollection {
+            button.configuration?.baseBackgroundColor = .white
+            
             button.setAttributedTitle(NSAttributedString(string: "☆", attributes: attributes), for: .normal)
             button.setAttributedTitle(NSAttributedString(string: "★", attributes: attributes), for: .selected)
             button.setAttributedTitle(NSAttributedString(string: "⭐️", attributes: attributes), for: .highlighted)
             button.setAttributedTitle(NSAttributedString(string: "⭐️", attributes: attributes), for: [.highlighted, .selected])
+            
+        }
+        updateButtonSelectionState()
+    }
+    
+    func updateButtonSelectionState() {
+        for (index, button) in buttonCollection.enumerated() {
+            button.isSelected = Double(index) < rating
         }
     }
 }
