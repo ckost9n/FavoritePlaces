@@ -19,7 +19,11 @@ class NewPlaceTableViewController: UITableViewController {
     @IBOutlet var placeName: UITextField!
     @IBOutlet var placeLocation: UITextField!
     @IBOutlet var placeType: UITextField!
-    @IBOutlet var buttonCollection: [UIButton]!
+    @IBOutlet var buttonCollection: [UIButton]! {
+        didSet {
+            setupButons()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -173,4 +177,21 @@ extension NewPlaceTableViewController: UIImagePickerControllerDelegate, UINaviga
         dismiss(animated: true)
     }
     
+}
+
+// MARK: - Buttons setup
+
+extension NewPlaceTableViewController {
+    func setupButons() {
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.orange,
+            .font: UIFont.boldSystemFont(ofSize: 40)
+        ]
+        for button in buttonCollection {
+            button.setAttributedTitle(NSAttributedString(string: "☆", attributes: attributes), for: .normal)
+            button.setAttributedTitle(NSAttributedString(string: "★", attributes: attributes), for: .selected)
+            button.setAttributedTitle(NSAttributedString(string: "⭐️", attributes: attributes), for: .highlighted)
+            button.setAttributedTitle(NSAttributedString(string: "⭐️", attributes: attributes), for: [.highlighted, .selected])
+        }
+    }
 }
