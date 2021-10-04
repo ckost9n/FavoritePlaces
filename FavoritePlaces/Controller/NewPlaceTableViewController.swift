@@ -66,6 +66,7 @@ class NewPlaceTableViewController: UITableViewController {
             placeType.text = currentPlace?.type
             placeImage.image = image
             placeImage.contentMode = .scaleAspectFill
+            rating = currentPlace.rating
         }
     }
     
@@ -131,6 +132,7 @@ class NewPlaceTableViewController: UITableViewController {
         newPlace.location = placeLocation.text
         newPlace.type = placeType.text
         newPlace.imageData = imageData
+        newPlace.rating = rating
         
         if currentPlace != nil {
             try! realm.write {
@@ -138,6 +140,7 @@ class NewPlaceTableViewController: UITableViewController {
                 currentPlace?.location = newPlace.location
                 currentPlace?.type = newPlace.type
                 currentPlace?.imageData = newPlace.imageData
+                currentPlace?.rating = newPlace.rating
             }
         } else {
             StorageManager.saveObject(newPlace)

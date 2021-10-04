@@ -160,10 +160,6 @@
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lzn-lx-hct">
                                                             <rect key="frame" x="0.0" y="0.0" width="65" height="62"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="FpJ-S0-3Vb"/>
-                                                                <constraint firstAttribute="height" constant="62" id="kTn-cB-Zet"/>
-                                                            </constraints>
                                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" title="☆"/>
@@ -215,16 +211,6 @@
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="kCJ-VG-5ym" firstAttribute="height" secondItem="lzn-lx-hct" secondAttribute="height" id="2TR-1i-UII"/>
-                                                        <constraint firstItem="tTH-jh-b9f" firstAttribute="width" secondItem="lzn-lx-hct" secondAttribute="width" id="9CC-P0-p9s"/>
-                                                        <constraint firstItem="hp1-Pi-cK7" firstAttribute="height" secondItem="lzn-lx-hct" secondAttribute="height" id="TQt-2n-Yfd"/>
-                                                        <constraint firstItem="tTH-jh-b9f" firstAttribute="height" secondItem="lzn-lx-hct" secondAttribute="height" id="XfV-1G-g6m"/>
-                                                        <constraint firstItem="Rn8-Td-0ql" firstAttribute="width" secondItem="lzn-lx-hct" secondAttribute="width" id="aRE-WJ-PcV"/>
-                                                        <constraint firstItem="Rn8-Td-0ql" firstAttribute="height" secondItem="lzn-lx-hct" secondAttribute="height" id="iWb-7t-gin"/>
-                                                        <constraint firstItem="hp1-Pi-cK7" firstAttribute="width" secondItem="lzn-lx-hct" secondAttribute="width" id="u9D-tP-8g1"/>
-                                                        <constraint firstItem="kCJ-VG-5ym" firstAttribute="width" secondItem="lzn-lx-hct" secondAttribute="width" id="wZs-Gb-uoa"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
