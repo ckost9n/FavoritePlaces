@@ -155,10 +155,52 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Qr-JI-Hgz" customClass="RatingControl" customModule="FavoritePlaces" customModuleProvider="target">
                                                     <rect key="frame" x="81" y="48" width="252" height="44"/>
                                                 </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TSd-lo-y1X">
+                                                    <rect key="frame" x="44.5" y="39" width="325" height="62"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzn-lx-hct">
+                                                            <rect key="frame" x="0.0" y="0.0" width="65" height="62"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="☆">
+                                                                <fontDescription key="titleFontDescription" type="italicSystem" pointSize="40"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCJ-VG-5ym">
+                                                            <rect key="frame" x="65" y="0.0" width="65" height="62"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="☆">
+                                                                <fontDescription key="titleFontDescription" type="italicSystem" pointSize="40"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTH-jh-b9f">
+                                                            <rect key="frame" x="130" y="0.0" width="65" height="62"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="☆">
+                                                                <fontDescription key="titleFontDescription" type="italicSystem" pointSize="40"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hp1-Pi-cK7">
+                                                            <rect key="frame" x="195" y="0.0" width="65" height="62"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="☆">
+                                                                <fontDescription key="titleFontDescription" type="italicSystem" pointSize="40"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rn8-Td-0ql">
+                                                            <rect key="frame" x="260" y="0.0" width="65" height="62"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="☆">
+                                                                <fontDescription key="titleFontDescription" type="italicSystem" pointSize="40"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="3Qr-JI-Hgz" firstAttribute="centerY" secondItem="Rvx-zv-H2b" secondAttribute="centerY" id="5kR-in-pGJ"/>
+                                                <constraint firstItem="TSd-lo-y1X" firstAttribute="centerY" secondItem="Rvx-zv-H2b" secondAttribute="centerY" id="BfE-78-5AF"/>
                                                 <constraint firstItem="3Qr-JI-Hgz" firstAttribute="centerX" secondItem="Rvx-zv-H2b" secondAttribute="centerX" id="n0P-lr-kX2"/>
+                                                <constraint firstItem="TSd-lo-y1X" firstAttribute="centerX" secondItem="Rvx-zv-H2b" secondAttribute="centerX" id="ykZ-p8-BAJ"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -194,6 +236,11 @@
                         <outlet property="placeName" destination="JrV-fp-bDY" id="7gc-fj-dHU"/>
                         <outlet property="placeType" destination="98m-Yp-hZt" id="a6C-tq-oo0"/>
                         <outlet property="saveButton" destination="DKt-OQ-JD7" id="GAr-kQ-34j"/>
+                        <outletCollection property="buttonCollection" destination="lzn-lx-hct" collectionClass="NSMutableArray" id="rBm-ci-w4c"/>
+                        <outletCollection property="buttonCollection" destination="kCJ-VG-5ym" collectionClass="NSMutableArray" id="scS-iB-dU0"/>
+                        <outletCollection property="buttonCollection" destination="tTH-jh-b9f" collectionClass="NSMutableArray" id="hMW-Rr-Gdh"/>
+                        <outletCollection property="buttonCollection" destination="hp1-Pi-cK7" collectionClass="NSMutableArray" id="bWC-kb-cUJ"/>
+                        <outletCollection property="buttonCollection" destination="Rn8-Td-0ql" collectionClass="NSMutableArray" id="r4Q-nR-LTn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suL-g3-or1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
